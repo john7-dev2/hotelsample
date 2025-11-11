@@ -2,30 +2,30 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Bed, Utensils, Wifi, Car } from "lucide-react";
+import { Waves, Dumbbell, Wifi, Car, MapPin, Plane } from "lucide-react";
 import hotelExterior from "@/assets/hotel-exterior.png";
 
 const Home = () => {
   const features = [
     {
-      icon: Bed,
-      title: "Luxury Rooms",
-      description: "Spacious accommodations with premium amenities and elegant furnishings",
+      icon: Waves,
+      title: "Outdoor Pool & Spa",
+      description: "Outdoor swimming pool, spa and wellness centre for ultimate relaxation",
     },
     {
-      icon: Utensils,
-      title: "Fine Dining",
-      description: "Exceptional culinary experiences with world-class chefs",
+      icon: Dumbbell,
+      title: "Fitness Centre",
+      description: "State-of-the-art fitness facilities to maintain your wellness routine",
     },
     {
       icon: Wifi,
-      title: "Modern Amenities",
-      description: "High-speed Wi-Fi, smart TVs, and cutting-edge technology",
+      title: "Free WiFi",
+      description: "Complimentary high-speed WiFi throughout the property",
     },
     {
       icon: Car,
-      title: "Valet Service",
-      description: "Complimentary valet parking and concierge services",
+      title: "Free Parking",
+      description: "Complimentary parking with valet service available",
     },
   ];
 
@@ -42,14 +42,33 @@ const Home = () => {
         {/* Welcome Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 text-foreground">
-                Welcome to Ashok Hotels
+                The Ashok, New Delhi
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Ashok Hotels is a luxury hotel offering Deluxe accommodations, exceptional dining experiences, 
-                and refined hospitality in an elegant setting. Explore the website and book your stay.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Located in the capital city of India, The Ashok offers a host of facilities such as an outdoor swimming pool, 
+                spa and wellness centre and a fitness centre. Free WiFi access is available.
               </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Experience luxury accommodations with modern amenities including air conditioning, minibar, electric kettle, 
+                and premium toiletries. Enjoy world-class dining at our multiple restaurants, shared lounge, ticket service, 
+                and tour desk facilities.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-8">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-gold" />
+                  <span>2 km from Rashtrapati Bhavan</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-gold" />
+                  <span>5 km from India Gate</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Plane className="w-4 h-4 text-gold" />
+                  <span>15 km from Airport</span>
+                </div>
+              </div>
               <Button variant="gold" size="lg">
                 Explore Our Rooms
               </Button>

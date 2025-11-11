@@ -1,30 +1,41 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Award, Heart, Shield, Star } from "lucide-react";
+import { Award, Heart, Shield, Star, Waves, Dumbbell, Coffee, Users } from "lucide-react";
 
 const About = () => {
-  const values = [
+  const facilities = [
     {
-      icon: Heart,
-      title: "Hospitality",
-      description: "Warm, personalized service that exceeds expectations",
+      icon: Waves,
+      title: "Pool & Spa",
+      description: "Outdoor swimming pool with spa and wellness centre",
     },
     {
-      icon: Star,
-      title: "Excellence",
-      description: "Commitment to the highest standards in every detail",
+      icon: Dumbbell,
+      title: "Fitness Centre",
+      description: "Modern fitness facilities for your workout needs",
     },
     {
-      icon: Shield,
-      title: "Trust",
-      description: "Building lasting relationships through integrity",
+      icon: Coffee,
+      title: "Shared Lounge",
+      description: "Comfortable lounge area for relaxation and socializing",
     },
     {
-      icon: Award,
-      title: "Recognition",
-      description: "Award-winning service and accommodations",
+      icon: Users,
+      title: "Tour Desk",
+      description: "Ticket service and tour desk for local attractions",
     },
+  ];
+
+  const roomAmenities = [
+    "Television with cable channels",
+    "Air conditioning for comfort",
+    "Minibar with refreshments",
+    "Electric kettle for beverages",
+    "Private bathroom with shower",
+    "Free toiletries provided",
+    "Comfortable slippers",
+    "Seating area for relaxation",
   ];
 
   return (
@@ -52,49 +63,50 @@ const About = () => {
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed animate-fade-in">
                 <p>
-                  Ashok Hotels stands as a beacon of luxury and refined hospitality, offering guests 
-                  an unparalleled experience that seamlessly blends elegance with contemporary comfort. 
-                  Our commitment to excellence has made us a preferred destination for discerning travelers 
-                  from around the world.
+                  Located in the capital city of India, The Ashok, New Delhi stands as a beacon of luxury and refined hospitality. 
+                  Our commitment to excellence has made us a preferred destination for discerning travelers from around the world.
                 </p>
                 <p>
-                  Nestled in the heart of Paradise City, our property features meticulously designed 
-                  accommodations, each thoughtfully appointed with premium amenities and sophisticated 
-                  décor. From the moment you arrive, you'll be enveloped in an atmosphere of tranquility 
-                  and sophistication.
+                  Our property features meticulously designed accommodations, each room equipped with TV, air conditioning, 
+                  minibar, electric kettle, and private bathroom with shower, free toiletries and slippers. Additional comforts 
+                  include a seating area and cable channels for your entertainment.
                 </p>
                 <p>
-                  Our dedication extends beyond luxurious rooms to encompass world-class dining experiences, 
-                  state-of-the-art facilities, and personalized service that anticipates your every need. 
-                  Whether you're traveling for business or leisure, Ashok Hotels provides the perfect 
-                  sanctuary for your stay.
+                  Beyond luxurious rooms, we offer an outdoor swimming pool, spa and wellness centre, fitness facilities, 
+                  shared lounge, ticket service, and tour desk. Our six distinctive restaurants serve cuisines from Indian 
+                  to Mediterranean, ensuring every dining experience is memorable.
+                </p>
+                <p>
+                  Conveniently located just 2 km from Rashtrapati Bhavan and 5 km from India Gate, our hotel provides 
+                  easy access to New Delhi's iconic landmarks. The New Delhi Railway Station is 9 km away, while Delhi 
+                  International Airport is 15 km from the property.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Facilities Section */}
         <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-display font-semibold text-center mb-16 text-foreground">
-              Our Values
+              Our Facilities
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {values.map((value, index) => (
+              {facilities.map((facility, index) => (
                 <div 
                   key={index}
                   className="text-center p-6 bg-card rounded-lg hover:shadow-lg transition-all duration-300 animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 mb-4">
-                    <value.icon className="w-8 h-8 text-gold" />
+                    <facility.icon className="w-8 h-8 text-gold" />
                   </div>
                   <h3 className="text-xl font-display font-semibold mb-3 text-foreground">
-                    {value.title}
+                    {facility.title}
                   </h3>
                   <p className="text-muted-foreground">
-                    {value.description}
+                    {facility.description}
                   </p>
                 </div>
               ))}
@@ -102,27 +114,21 @@ const About = () => {
           </div>
         </section>
 
-        {/* Awards Section */}
+        {/* Room Amenities Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-semibold mb-12 text-foreground">
-                Awards & Recognition
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-display font-semibold text-center mb-12 text-foreground">
+                Room Amenities
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  "Best Luxury Hotel 2024",
-                  "Excellence in Service Award",
-                  "5-Star Accommodation Rating"
-                ].map((award, index) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {roomAmenities.map((amenity, index) => (
                   <div 
                     key={index}
-                    className="p-6 bg-card rounded-lg"
+                    className="flex items-center gap-3 p-4 bg-card rounded-lg hover:shadow-md transition-all duration-300"
                   >
-                    <Award className="w-12 h-12 text-gold mx-auto mb-4" />
-                    <p className="text-lg font-display font-semibold text-foreground">
-                      {award}
-                    </p>
+                    <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0"></div>
+                    <p className="text-muted-foreground">{amenity}</p>
                   </div>
                 ))}
               </div>
@@ -130,16 +136,32 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-20 bg-secondary text-secondary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-display font-semibold mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl mb-8 text-secondary-foreground/80 max-w-2xl mx-auto">
-              Our dedicated staff is committed to making your stay memorable with exceptional 
-              service and attention to detail.
-            </p>
+        {/* Location Section */}
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-display font-semibold mb-12 text-foreground">
+                Prime Location
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                <div className="p-6 bg-card rounded-lg">
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Rashtrapati Bhavan</h3>
+                  <p className="text-muted-foreground">2 km away</p>
+                </div>
+                <div className="p-6 bg-card rounded-lg">
+                  <h3 className="font-display font-semibold mb-2 text-foreground">India Gate</h3>
+                  <p className="text-muted-foreground">5 km away</p>
+                </div>
+                <div className="p-6 bg-card rounded-lg">
+                  <h3 className="font-display font-semibold mb-2 text-foreground">New Delhi Railway Station</h3>
+                  <p className="text-muted-foreground">9 km away</p>
+                </div>
+                <div className="p-6 bg-card rounded-lg">
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Delhi International Airport</h3>
+                  <p className="text-muted-foreground">15 km away</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

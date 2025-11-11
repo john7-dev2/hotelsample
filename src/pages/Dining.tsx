@@ -7,24 +7,45 @@ import { Utensils, Coffee, Wine, Clock } from "lucide-react";
 const Dining = () => {
   const restaurants = [
     {
-      name: "The Grand Restaurant",
-      type: "Fine Dining",
-      description: "Experience exquisite international cuisine in an elegant atmosphere with panoramic views",
-      hours: "6:00 PM - 11:00 PM",
+      name: "Oudh",
+      type: "Indian Cuisine",
+      description: "Relish authentic Indian delights with traditional recipes and rich flavors",
+      hours: "12:00 PM - 11:00 PM",
       icon: Utensils,
     },
     {
-      name: "Palm Café",
-      type: "Casual Dining",
-      description: "Enjoy all-day dining with a selection of continental and local favorites",
+      name: "Frontier",
+      type: "North-Western Indian",
+      description: "Savor the bold flavors of north-western Indian cuisines with traditional tandoor specialties",
+      hours: "12:00 PM - 11:00 PM",
+      icon: Utensils,
+    },
+    {
+      name: "Sagar Ratna",
+      type: "South Indian",
+      description: "Enjoy authentic South Indian delights including dosas, idlis, and traditional preparations",
       hours: "7:00 AM - 10:00 PM",
       icon: Coffee,
     },
     {
-      name: "The Wine Cellar",
-      type: "Bar & Lounge",
-      description: "Unwind with premium wines, craft cocktails, and light appetizers",
-      hours: "5:00 PM - 1:00 AM",
+      name: "Shraman",
+      type: "Jain Food",
+      description: "Pure vegetarian Jain food prepared with care following Jain dietary guidelines",
+      hours: "12:00 PM - 10:00 PM",
+      icon: Utensils,
+    },
+    {
+      name: "Nom-Nom",
+      type: "Pan-Asian",
+      description: "Discover Pan-Asian delicacies with flavors from across Asia",
+      hours: "12:00 PM - 11:00 PM",
+      icon: Utensils,
+    },
+    {
+      name: "Zerruco",
+      type: "Mediterranean",
+      description: "Experience Mediterranean delights with fresh ingredients and authentic flavors",
+      hours: "6:00 PM - 11:00 PM",
       icon: Wine,
     },
   ];
@@ -49,8 +70,9 @@ const Dining = () => {
                 Exceptional Dining Experiences
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Indulge in world-class cuisine prepared by our award-winning chefs. From fine dining 
-                to casual elegance, each venue offers a unique culinary journey.
+                Indulge in world-class cuisine at our diverse restaurants. From authentic Indian delights 
+                to Mediterranean flavors, each venue offers a unique culinary journey. Room service is 
+                available for in-room dining comforts.
               </p>
             </div>
           </div>
