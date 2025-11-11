@@ -10,9 +10,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center">
-                <span className="text-xl font-display font-semibold text-gold">A</span>
+                <span className="text-xl font-display font-semibold text-gold">G</span>
               </div>
-              <span className="text-xl font-display font-semibold">Ashok Hotels</span>
+              <span className="text-xl font-display font-semibold">Grand Palace Hotel</span>
             </div>
             <p className="text-sm text-secondary-foreground/80">
               Luxury accommodations and refined hospitality in an elegant setting.
@@ -57,15 +57,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm">
                 <Phone className="w-4 h-4 mt-0.5 text-gold" />
-                <span>+91 11 2611 0101</span>
+                <span>+91 22 6789 1234</span>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 text-gold" />
-                <span>reservations@theashok.com</span>
+                <span>reservations@grandpalace.com</span>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-gold" />
-                <span>50-B, Chanakyapuri, New Delhi, India</span>
+                <span>123 Marine Drive, Mumbai, India</span>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/20 mt-8 pt-8 text-center text-sm text-secondary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Ashok Hotels. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Grand Palace Hotel. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -37,6 +37,7 @@ const Rooms = () => {
       features: ["King/Twin Bed", "32 m²", "2 Guests", "Free Wi-Fi"],
       icons: [Bed, Maximize, Users, Wifi],
       quantity: 3,
+      imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
       name: "Executive Room",
@@ -45,6 +46,7 @@ const Rooms = () => {
       features: ["King Bed", "45 m²", "2 Guests", "Free Wi-Fi"],
       icons: [Bed, Maximize, Users, Wifi],
       quantity: 3,
+      imageUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
       name: "Executive Suite",
@@ -53,6 +55,7 @@ const Rooms = () => {
       features: ["King Bed + Sofa", "65 m²", "4 Guests", "Free Wi-Fi"],
       icons: [Bed, Maximize, Users, Wifi],
       quantity: 3,
+      imageUrl: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
   ];
 
@@ -79,9 +82,13 @@ const Rooms = () => {
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-                    {/* Room Image Placeholder */}
-                    <div className="h-80 bg-muted rounded-xl flex items-center justify-center">
-                      <Bed className="w-24 h-24 text-gold/30" />
+                    {/* Room Image */}
+                    <div className="h-80 rounded-xl overflow-hidden group">
+                      <img 
+                        src={room.imageUrl} 
+                        alt={room.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
                     </div>
 
                     {/* Room Details */}

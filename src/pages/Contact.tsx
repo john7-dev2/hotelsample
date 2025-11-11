@@ -86,9 +86,9 @@ const Contact = () => {
                           Address
                         </h3>
                         <p className="text-muted-foreground">
-                          123 Luxury Lane<br />
-                          Paradise City, PC 12345<br />
-                          United States
+                          123 Marine Drive<br />
+                          Mumbai, MH 400001<br />
+                          India
                         </p>
                       </div>
                     </div>
@@ -102,8 +102,8 @@ const Contact = () => {
                           Phone
                         </h3>
                         <p className="text-muted-foreground">
-                          Reception: +1 (555) 123-4567<br />
-                          Reservations: +1 (555) 123-4568
+                          Reception: +91 22 6789 1234<br />
+                          Reservations: +91 22 6789 1235
                         </p>
                       </div>
                     </div>
@@ -117,8 +117,8 @@ const Contact = () => {
                           Email
                         </h3>
                         <p className="text-muted-foreground">
-                          General: info@ashokhotels.com<br />
-                          Reservations: book@ashokhotels.com
+                          General: info@grandpalace.com<br />
+                          Reservations: reservations@grandpalace.com
                         </p>
                       </div>
                     </div>

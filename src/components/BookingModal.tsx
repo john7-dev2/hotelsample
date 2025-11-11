@@ -146,7 +146,7 @@ const BookingModal = ({ isOpen, onClose, roomName, roomPrice }: BookingModalProp
         <DialogHeader>
           <DialogTitle className="text-2xl font-display">Book Your Stay</DialogTitle>
           <DialogDescription>
-            Complete your reservation for {roomName} at The Ashok Hotel
+            Complete your reservation for {roomName} at Grand Palace Hotel
           </DialogDescription>
         </DialogHeader>
 

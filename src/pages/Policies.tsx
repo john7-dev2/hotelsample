@@ -151,12 +151,12 @@ const Policies = () => {
                 </h3>
                 <div className="bg-card p-6 rounded-lg space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Other Known Names for The Ashok Hotel</h4>
-                    <p className="text-muted-foreground">The Ashok is also known by various other names in different booking platforms and travel guides.</p>
+                    <h4 className="font-semibold text-foreground mb-2">Other Known Names for Grand Palace Hotel</h4>
+                    <p className="text-muted-foreground">Grand Palace Hotel is also known by various other names in different booking platforms and travel guides.</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Frequently Asked Questions</h4>
-                    <p className="text-muted-foreground">For frequently asked questions about The Ashok Hotel, please contact our front desk or visit our main information desk.</p>
+                    <p className="text-muted-foreground">For frequently asked questions about Grand Palace Hotel, please contact our front desk or visit our main information desk.</p>
                   </div>
                 </div>
               </div>

@@ -63,7 +63,7 @@ const About = () => {
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed animate-fade-in">
                 <p>
-                  Located in the capital city of India, The Ashok, New Delhi stands as a beacon of luxury and refined hospitality. 
+                  Located in the heart of Mumbai, Grand Palace Hotel stands as a beacon of luxury and refined hospitality. 
                   Our commitment to excellence has made us a preferred destination for discerning travelers from around the world.
                 </p>
                 <p>
@@ -77,9 +77,9 @@ const About = () => {
                   to Mediterranean, ensuring every dining experience is memorable.
                 </p>
                 <p>
-                  Conveniently located just 2 km from Rashtrapati Bhavan and 5 km from India Gate, our hotel provides 
-                  easy access to New Delhi's iconic landmarks. The New Delhi Railway Station is 9 km away, while Delhi 
-                  International Airport is 15 km from the property.
+                  Conveniently located just 1 km from Marine Drive and 3 km from Gateway of India, our hotel provides 
+                  easy access to Mumbai's iconic landmarks. The Chhatrapati Shivaji Terminus is 8 km away, while Mumbai 
+                  International Airport is 12 km from the property.
                 </p>
               </div>
             </div>
@@ -145,20 +145,20 @@ const About = () => {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
                 <div className="p-6 bg-card rounded-lg">
-                  <h3 className="font-display font-semibold mb-2 text-foreground">Rashtrapati Bhavan</h3>
-                  <p className="text-muted-foreground">2 km away</p>
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Marine Drive</h3>
+                  <p className="text-muted-foreground">1 km away</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg">
-                  <h3 className="font-display font-semibold mb-2 text-foreground">India Gate</h3>
-                  <p className="text-muted-foreground">5 km away</p>
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Gateway of India</h3>
+                  <p className="text-muted-foreground">3 km away</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg">
-                  <h3 className="font-display font-semibold mb-2 text-foreground">New Delhi Railway Station</h3>
-                  <p className="text-muted-foreground">9 km away</p>
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Chhatrapati Shivaji Terminus</h3>
+                  <p className="text-muted-foreground">8 km away</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg">
-                  <h3 className="font-display font-semibold mb-2 text-foreground">Delhi International Airport</h3>
-                  <p className="text-muted-foreground">15 km away</p>
+                  <h3 className="font-display font-semibold mb-2 text-foreground">Mumbai International Airport</h3>
+                  <p className="text-muted-foreground">12 km away</p>
                 </div>
               </div>
             </div>
