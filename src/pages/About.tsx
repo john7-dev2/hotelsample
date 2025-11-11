@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Award, Heart, Shield, Star, Waves, Dumbbell, Coffee, Users } from "lucide-react";
+import { Award, Heart, Shield, Star, Waves, Dumbbell, Coffee, Users, Wifi, Car, TreePine, Music, Utensils, Wine, Phone, Shield as SecurityIcon, Clock, Briefcase, Globe, Baby, CreditCard, MapPin, Zap, Bed, Bath, Gamepad2, Camera, ShoppingBag } from "lucide-react";
 
 const About = () => {
   const facilities = [
@@ -159,6 +159,186 @@ const About = () => {
                 <div className="p-6 bg-card rounded-lg">
                   <h3 className="font-display font-semibold mb-2 text-foreground">Delhi International Airport</h3>
                   <p className="text-muted-foreground">15 km away</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comprehensive Services Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-display font-semibold text-center mb-16 text-foreground">
+                Hotel Services & Amenities
+              </h2>
+              
+              {/* Internet & Connectivity */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Wifi className="w-6 h-6 text-gold" />
+                  Internet
+                </h3>
+                <div className="bg-card p-6 rounded-lg">
+                  <p className="text-muted-foreground">WiFi is available in all areas and is free of charge.</p>
+                </div>
+              </div>
+
+              {/* Parking */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Car className="w-6 h-6 text-gold" />
+                  Parking
+                </h3>
+                <div className="bg-card p-6 rounded-lg">
+                  <p className="text-muted-foreground">Valet parking available</p>
+                </div>
+              </div>
+
+              {/* Outdoors */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <TreePine className="w-6 h-6 text-gold" />
+                  Outdoors
+                </h3>
+                <div className="bg-card p-6 rounded-lg">
+                  <p className="text-muted-foreground">Garden</p>
+                </div>
+              </div>
+
+              {/* Activities */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Music className="w-6 h-6 text-gold" />
+                  Activities
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Nightclub/DJ <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Golf course (within 3 km) <span className="text-gold">Additional charge</span></p>
+                </div>
+              </div>
+
+              {/* Food & Drink */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Utensils className="w-6 h-6 text-gold" />
+                  Food & Drink
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Bar</p>
+                  <p className="text-muted-foreground">• Restaurant</p>
+                </div>
+              </div>
+
+              {/* Reception Services */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Phone className="w-6 h-6 text-gold" />
+                  Reception Services
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Invoice provided</p>
+                  <p className="text-muted-foreground">• Lockers</p>
+                  <p className="text-muted-foreground">• Concierge service</p>
+                  <p className="text-muted-foreground">• Luggage storage</p>
+                  <p className="text-muted-foreground">• Tour desk</p>
+                  <p className="text-muted-foreground">• Currency exchange</p>
+                  <p className="text-muted-foreground">• 24-hour front desk</p>
+                </div>
+              </div>
+
+              {/* Cleaning Services */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Bath className="w-6 h-6 text-gold" />
+                  Cleaning Services
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Daily housekeeping</p>
+                  <p className="text-muted-foreground">• Trouser press <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Ironing service <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Dry cleaning <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Laundry <span className="text-gold">Additional charge</span></p>
+                </div>
+              </div>
+
+              {/* Business Facilities */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Briefcase className="w-6 h-6 text-gold" />
+                  Business Facilities
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Fax/photocopying <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Business centre <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Meeting/banquet facilities <span className="text-gold">Additional charge</span></p>
+                </div>
+              </div>
+
+              {/* Safety & Security */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <SecurityIcon className="w-6 h-6 text-gold" />
+                  Safety & Security
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Fire extinguishers</p>
+                  <p className="text-muted-foreground">• CCTV outside property</p>
+                  <p className="text-muted-foreground">• CCTV in common areas</p>
+                  <p className="text-muted-foreground">• Smoke alarms</p>
+                  <p className="text-muted-foreground">• Security alarm</p>
+                  <p className="text-muted-foreground">• Key card access</p>
+                  <p className="text-muted-foreground">• 24-hour security</p>
+                  <p className="text-muted-foreground">• Safety deposit box</p>
+                </div>
+              </div>
+
+              {/* General Amenities */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Star className="w-6 h-6 text-gold" />
+                  General
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Designated smoking area</p>
+                  <p className="text-muted-foreground">• Air conditioning</p>
+                  <p className="text-muted-foreground">• Car hire</p>
+                  <p className="text-muted-foreground">• Lift</p>
+                  <p className="text-muted-foreground">• Family rooms</p>
+                  <p className="text-muted-foreground">• Facilities for disabled guests</p>
+                  <p className="text-muted-foreground">• Airport shuttle <span className="text-gold">Additional charge</span></p>
+                  <p className="text-muted-foreground">• Non-smoking rooms</p>
+                  <p className="text-muted-foreground">• Room service</p>
+                </div>
+              </div>
+
+              {/* Wellness */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Waves className="w-6 h-6 text-gold" />
+                  Wellness
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• Full body massage</p>
+                  <p className="text-muted-foreground">• Hand massage</p>
+                  <p className="text-muted-foreground">• Head massage</p>
+                  <p className="text-muted-foreground">• Foot massage</p>
+                  <p className="text-muted-foreground">• Neck massage</p>
+                  <p className="text-muted-foreground">• Back massage</p>
+                  <p className="text-muted-foreground">• Spa facilities</p>
+                  <p className="text-muted-foreground">• Massage <span className="text-gold">Additional charge</span></p>
+                </div>
+              </div>
+
+              {/* Languages Spoken */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-foreground flex items-center gap-3">
+                  <Globe className="w-6 h-6 text-gold" />
+                  Languages Spoken
+                </h3>
+                <div className="bg-card p-6 rounded-lg space-y-2">
+                  <p className="text-muted-foreground">• English</p>
+                  <p className="text-muted-foreground">• Hindi</p>
                 </div>
               </div>
             </div>

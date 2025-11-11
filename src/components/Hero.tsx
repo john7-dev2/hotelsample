@@ -7,6 +7,7 @@ interface HeroProps {
   showCTA?: boolean;
   ctaText?: string;
   height?: string;
+  onCtaClick?: () => void;
 }
 
 const Hero = ({ 
@@ -14,7 +15,8 @@ const Hero = ({
   subtitle, 
   showCTA = true, 
   ctaText = "CHECK AVAILABILITY",
-  height = "h-[600px]" 
+  height = "h-[600px]",
+  onCtaClick
 }: HeroProps) => {
   return (
     <div className={`relative ${height} flex items-center justify-center overflow-hidden`}>
@@ -37,7 +39,12 @@ const Hero = ({
           </p>
         )}
         {showCTA && (
-          <Button variant="hero" size="lg" className="text-base px-12 py-6 h-auto">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="text-base px-12 py-6 h-auto"
+            onClick={onCtaClick}
+          >
             {ctaText}
           </Button>
         )}

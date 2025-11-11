@@ -2,16 +2,39 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import BookingModal from "./BookingModal";
 
 const Navigation = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookingModal, setBookingModal] = useState({
+    isOpen: false,
+    roomName: "Standard Room",
+    roomPrice: "₹8,500",
+  });
+
+  const handleBookNow = () => {
+    setBookingModal({
+      isOpen: true,
+      roomName: "Room Selection",
+      roomPrice: "₹8,500",
+    });
+  };
+
+  const closeBookingModal = () => {
+    setBookingModal({
+      isOpen: false,
+      roomName: "",
+      roomPrice: "",
+    });
+  };
 
   const navLinks = [
     { name: "HOME", path: "/" },
     { name: "ROOMS", path: "/rooms" },
     { name: "DINING", path: "/dining" },
     { name: "ABOUT", path: "/about" },
+    { name: "POLICIES", path: "/policies" },
     { name: "CONTACT", path: "/contact" },
   ];
 
@@ -47,7 +70,7 @@ const Navigation = () => {
 
           {/* Book Now Button */}
           <div className="hidden md:block">
-            <Button variant="gold" size="lg">
+            <Button variant="gold" size="lg" onClick={handleBookNow}>
               BOOK NOW
             </Button>
           </div>
@@ -78,12 +101,19 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="gold" size="lg" className="w-full">
+            <Button variant="gold" size="lg" className="w-full" onClick={handleBookNow}>
               BOOK NOW
             </Button>
           </div>
         )}
       </div>
+      
+      <BookingModal
+        isOpen={bookingModal.isOpen}
+        onClose={closeBookingModal}
+        roomName={bookingModal.roomName}
+        roomPrice={bookingModal.roomPrice}
+      />
     </nav>
   );
 };

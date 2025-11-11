@@ -1,31 +1,58 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import BookingModal from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Bed, Maximize, Users, Wifi } from "lucide-react";
 
 const Rooms = () => {
+  const [bookingModal, setBookingModal] = useState({
+    isOpen: false,
+    roomName: "",
+    roomPrice: "",
+  });
+
+  const handleBookNow = (roomName: string, roomPrice: string) => {
+    setBookingModal({
+      isOpen: true,
+      roomName,
+      roomPrice,
+    });
+  };
+
+  const closeBookingModal = () => {
+    setBookingModal({
+      isOpen: false,
+      roomName: "",
+      roomPrice: "",
+    });
+  };
+
   const rooms = [
     {
-      name: "Deluxe Room",
-      description: "Elegant room with king-size bed, modern amenities, and city views",
-      price: "$299",
-      features: ["King Bed", "40 m²", "2 Guests", "Free Wi-Fi"],
+      name: "Standard Room",
+      description: "Comfortable room with modern amenities, air conditioning, minibar, and city views. Perfect for business and leisure travelers.",
+      price: "₹8,500",
+      features: ["King/Twin Bed", "32 m²", "2 Guests", "Free Wi-Fi"],
       icons: [Bed, Maximize, Users, Wifi],
+      quantity: 3,
+    },
+    {
+      name: "Executive Room",
+      description: "Spacious room with enhanced amenities, premium furnishings, and executive lounge access for the discerning traveler.",
+      price: "₹12,000",
+      features: ["King Bed", "45 m²", "2 Guests", "Free Wi-Fi"],
+      icons: [Bed, Maximize, Users, Wifi],
+      quantity: 3,
     },
     {
       name: "Executive Suite",
-      description: "Spacious suite with separate living area and premium furnishings",
-      price: "$499",
-      features: ["King Bed", "65 m²", "4 Guests", "Free Wi-Fi"],
+      description: "Luxurious suite with separate living area, premium amenities, and personalized service for an unforgettable stay.",
+      price: "₹18,500",
+      features: ["King Bed + Sofa", "65 m²", "4 Guests", "Free Wi-Fi"],
       icons: [Bed, Maximize, Users, Wifi],
-    },
-    {
-      name: "Presidential Suite",
-      description: "Ultimate luxury with panoramic views, private terrace, and butler service",
-      price: "$899",
-      features: ["2 King Beds", "120 m²", "6 Guests", "Free Wi-Fi"],
-      icons: [Bed, Maximize, Users, Wifi],
+      quantity: 3,
     },
   ];
 
@@ -59,6 +86,11 @@ const Rooms = () => {
 
                     {/* Room Details */}
                     <div className="flex flex-col justify-center">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-sm font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
+                          × {room.quantity}
+                        </span>
+                      </div>
                       <h3 className="text-3xl font-display font-semibold mb-4 text-foreground">
                         {room.name}
                       </h3>
@@ -80,17 +112,29 @@ const Rooms = () => {
                       </div>
 
                       {/* Price and CTA */}
-                      <div className="flex items-center justify-between pt-6 border-t border-border">
-                        <div>
-                          <p className="text-sm text-muted-foreground mb-1">Starting from</p>
-                          <p className="text-3xl font-display font-semibold text-gold">
-                            {room.price}
-                            <span className="text-base text-muted-foreground font-normal">/night</span>
-                          </p>
+                      <div className="pt-6 border-t border-border space-y-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="text-sm text-muted-foreground mb-1">Starting from</p>
+                            <p className="text-3xl font-display font-semibold text-gold">
+                              {room.price}
+                              <span className="text-base text-muted-foreground font-normal">/night</span>
+                            </p>
+                          </div>
                         </div>
-                        <Button variant="gold" size="lg">
-                          Book Now
-                        </Button>
+                        <div className="flex gap-3">
+                          <Button variant="outline" size="lg" className="flex-1">
+                            Details
+                          </Button>
+                          <Button 
+                            variant="gold" 
+                            size="lg" 
+                            className="flex-1"
+                            onClick={() => handleBookNow(room.name, room.price)}
+                          >
+                            SEE RATES!
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -118,6 +162,13 @@ const Rooms = () => {
           </div>
         </section>
       </main>
+
+      <BookingModal
+        isOpen={bookingModal.isOpen}
+        onClose={closeBookingModal}
+        roomName={bookingModal.roomName}
+        roomPrice={bookingModal.roomPrice}
+      />
 
       <Footer />
     </div>

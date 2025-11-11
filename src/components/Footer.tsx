@@ -43,6 +43,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/policies" className="text-sm hover:text-gold transition-colors">
+                  Policies
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -52,15 +57,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm">
                 <Phone className="w-4 h-4 mt-0.5 text-gold" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 11 2611 0101</span>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 text-gold" />
-                <span>info@ashokhotels.com</span>
+                <span>reservations@theashok.com</span>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-gold" />
-                <span>123 Luxury Lane, Paradise City</span>
+                <span>50-B, Chanakyapuri, New Delhi, India</span>
               </li>
             </ul>
           </div>

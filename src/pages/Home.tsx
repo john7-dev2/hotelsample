@@ -1,11 +1,35 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import BookingModal from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Waves, Dumbbell, Wifi, Car, MapPin, Plane } from "lucide-react";
 import hotelExterior from "@/assets/hotel-exterior.png";
 
 const Home = () => {
+  const [bookingModal, setBookingModal] = useState({
+    isOpen: false,
+    roomName: "Standard Room",
+    roomPrice: "₹8,500",
+  });
+
+  const handleBookNow = () => {
+    setBookingModal({
+      isOpen: true,
+      roomName: "Room Selection",
+      roomPrice: "₹8,500",
+    });
+  };
+
+  const closeBookingModal = () => {
+    setBookingModal({
+      isOpen: false,
+      roomName: "",
+      roomPrice: "",
+    });
+  };
+
   const features = [
     {
       icon: Waves,
@@ -37,6 +61,7 @@ const Home = () => {
         <Hero 
           title="ASHOK HOTELS"
           subtitle="WELCOME TO ASHOK HOTELS"
+          onCtaClick={handleBookNow}
         />
 
         {/* Welcome Section */}
@@ -69,7 +94,7 @@ const Home = () => {
                   <span>15 km from Airport</span>
                 </div>
               </div>
-              <Button variant="gold" size="lg">
+              <Button variant="gold" size="lg" onClick={handleBookNow}>
                 Explore Our Rooms
               </Button>
             </div>
@@ -126,12 +151,19 @@ const Home = () => {
             <p className="text-xl mb-8 text-secondary-foreground/80 max-w-2xl mx-auto">
               Book your luxury accommodation today and experience the finest hospitality
             </p>
-            <Button variant="gold" size="lg" className="text-base px-12 py-6 h-auto">
+            <Button variant="gold" size="lg" className="text-base px-12 py-6 h-auto" onClick={handleBookNow}>
               BOOK YOUR STAY
             </Button>
           </div>
         </section>
       </main>
+
+      <BookingModal
+        isOpen={bookingModal.isOpen}
+        onClose={closeBookingModal}
+        roomName={bookingModal.roomName}
+        roomPrice={bookingModal.roomPrice}
+      />
 
       <Footer />
     </div>
